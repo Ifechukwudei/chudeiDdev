@@ -1,0 +1,85 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-size: 16px;
+  color: beige;
+  font-family: "poppins", sans-serif;
+}
+.header {
+  display: flex;
+  margin: 0;
+  padding: 0 5px 0 5px;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.header__nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+}
+.header__nav li:hover {
+  border-bottom: 5px solid beige;
+  padding-bottom: 2px;
+  transition: ease-in-out;
+  transition-delay: 500ms;
+}
+.header__button {
+  border: 3px solid beige;
+  padding: 10px;
+}
+.header__button a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+}
+.header__button:hover {
+  color: black;
+  background-color: beige;
+  transition: ease-in-out;
+  transition-delay: 500ms;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero__image {
+  border: 5px solid beige;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.main__image {
+  border-radius: 50%;
+}
+.text-contaner {
+  display: flex;
+}
+.hero__text.one {
+  font-size: 1.5rem;
+}
+.wave {
+  margin-top: 1.02rem;
+}
+.hero__text.two {
+  font-size: 3rem;
+}
+.hero__text.three {
+  font-size: 1.5rem;
+}
