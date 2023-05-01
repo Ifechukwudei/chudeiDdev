@@ -1,14 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 body {
-  background-color: black;
   font-size: 16px;
   color: beige;
-  font-family: "poppins", sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.892) 40%,
+    rgb(54, 54, 54) 80%
+  );
+  height: 100vh;
+  margin: 0;
 }
+/*STYLING FOR LARGER SCREENS*/
 .header {
   display: flex;
   margin: 0;
@@ -67,12 +76,15 @@ body {
 }
 .main__image {
   border-radius: 50%;
+  min-height: 200px;
+  min-width: 200px;
 }
 .text-contaner {
   display: flex;
 }
 .hero__text.one {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-family: "Alkatra", cursive;
 }
 .wave {
   margin-top: 1.02rem;
@@ -82,4 +94,46 @@ body {
 }
 .hero__text.three {
   font-size: 1.5rem;
+}
+/*END OF STYLING FOR LARGER SCREENS*/
+/*STYLING FOR SMALLER SCREENS*/
+
+@media (max-width: 991px) {
+  .header {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    /*padding: 0 5px 0 5px;*/
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+  }
+  .header__button {
+    display: none;
+  }
+  .header__nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+  }
+  .main__image {
+    border-radius: 50%;
+    min-height: 150px;
+    min-width: 150px;
+    height: 200px;
+    width: 200px;
+  }
+  .hero__text.one {
+    font-size: 1rem;
+    font-family: "Alkatra", cursive;
+  }
+  .wave {
+    margin-top: 0.5rem;
+  }
+  .hero__text.two {
+    font-size: 1.8rem;
+  }
+  .hero__text.three {
+    font-size: 1rem;
+  }
 }
