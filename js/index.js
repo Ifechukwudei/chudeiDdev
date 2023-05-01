@@ -6,6 +6,6 @@ window.addEventListener("load", function () {
 
     // Show the content
     var content = document.getElementById("content")
-    //content.style.display = "block"
+    content.style.display = "block"
   }, 15000)
 })
