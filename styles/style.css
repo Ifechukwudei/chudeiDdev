@@ -9,11 +9,7 @@ body {
   font-size: 16px;
   color: beige;
   font-family: "Fira Sans", sans-serif;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.892) 40%,
-    rgb(54, 54, 54) 80%
-  );
+  background: black;
   height: 100vh;
   margin: 0;
 }
@@ -21,7 +17,7 @@ body {
 .header {
   display: flex;
   margin: 0;
-  padding: 0 5px 0 5px;
+  padding: 0 10px 0 10px;
   justify-content: space-between;
   list-style: none;
   align-items: center;
@@ -40,9 +36,10 @@ body {
   font-size: 1.5rem;
 }
 .header__nav li:hover {
-  border-bottom: 5px solid beige;
+  border-bottom: 5px solid rgb(35, 119, 152);
   padding-bottom: 2px;
   transition: ease-in-out;
+  color: rgb(35, 119, 152);
   transition-delay: 500ms;
 }
 .header__button {
@@ -56,7 +53,7 @@ body {
 }
 .header__button:hover {
   color: black;
-  background-color: beige;
+  background-color: rgb(35, 119, 152);
   transition: ease-in-out;
   transition-delay: 500ms;
 }
@@ -67,7 +64,7 @@ body {
   flex-direction: column;
 }
 .hero__image {
-  border: 5px solid beige;
+  border: 5px solid rgb(35, 119, 152);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -87,7 +84,7 @@ body {
   font-family: "Alkatra", cursive;
 }
 .wave {
-  margin-top: 1.02rem;
+  margin-top: 2rem;
 }
 .hero__text.two {
   font-size: 3rem;
@@ -148,6 +145,9 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    opacity: 1;
+    transition: opacity 1s ease;
+    pointer-events: auto;
   }
 
   .loader h1 {
@@ -187,6 +187,17 @@ body {
   #content {
     display: none;
   }
+  #content.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  #content.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+  }
 }
 /*loader*/
 @media (min-width: 991px) {
@@ -202,6 +213,9 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    opacity: 1;
+    transition: opacity 1s ease;
+    pointer-events: auto;
   }
 
   .loader h1 {
@@ -241,4 +255,16 @@ body {
   #content {
     display: none;
   }
+  #content.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  #content.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+  }
 }
+/* transition*/
