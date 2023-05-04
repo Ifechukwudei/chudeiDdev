@@ -17,6 +17,7 @@ window.addEventListener("load", function () {
   // Show the loading page initially
   var loadingPage = document.getElementById("loading-page")
   var content = document.getElementById("content")
+  var header = document.getElementById("headerId")
 
   setTimeout(function () {
     // Hide the loading page
@@ -24,6 +25,8 @@ window.addEventListener("load", function () {
     loadingPage.style.pointerEvents = "none"
 
     // Show the content and apply the transition effect
+    header.classList.remove("hidden")
+    header.classList.add("visible")
     content.classList.add("visible")
     content.style.display = "block"
   }, 15000) // 15 seconds delay
