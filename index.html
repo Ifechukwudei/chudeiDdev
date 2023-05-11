@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,18 +15,17 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <header id="headerId" class="header hidden">
-      <ul class="header__nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <p class="header__button"><a href="">Get in touch</a></p>
-    </header>
-
-    <div id="content" class="hidden">
-      <section class="hero">
+    
+      <header id="headerId" class="header hidden">
+        <ul class="header__nav">
+          <li><a href="#headerId">Home</a></li>
+          <li><a href="#aboutMe">About</a></li>
+          <li><a href="#project">projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <p class="header__button"><a href="#Contact">Get in touch</a></p>
+      </header>
+      <section class="hero hidden">
         <div class="hero__image">
           <img
             src="image/my pic.png"
@@ -31,38 +37,107 @@
         </div>
         <div class="text-contaner">
           <p class="hero__text one">Hi there, I am Ifechukwudei</p>
-          <img
+          <span><img
             src="Svg/waving-hand-skin-3-svgrepo-com.svg"
             alt="waving hand"
-            height="32px"
+            height="40px"
             width="50px"
             class="wave"
-          />
+          /></span>
         </div>
-        <h1 class="hero__text two">A Fullstack Developer</h1>
+        <h1 class="hero__text two">A Front-end Developer</h1>
         <p id="typing-text" class="hero__text three">|</p>
-        <div class="scroll-indicator"></div>
+        <div class="scroll"><div class="scroll-indicator"></div></div>
         
       </section>
-      <article class="about">
+      <article id="aboutMe" class="about">
         <div class="about__line"> <hr/></div>
 
-        <h1 class="about__header">About <span class="about__header blue">me</span></h1>
-        <div>
-          <div></div>
-          <div></div>
+        <h1 class="about__header hidden">ABOUT <span class="about__header blue">me</span></h1>
+        <div class="about__container hidden">
+          <div class="about__image"><img src="/image/PSX_20221128_055846.jpg" alt="about image" class="aboutme__image" height="400px" width="400px"></div>
+          <div class="about__text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aut expedita id aliquam cum sed ullam, quaerat eveniet ab exercitationem! Magnam, eligendi placeat enim quod ipsum voluptatum veritatis delectus sit nam doloribus maiores, quisquam voluptatibus incidunt facere, quis odit repellat commodi ratione. Minus voluptates, beatae eos libero sapiente ipsam architecto voluptate dolore quis porro. Esse aliquam minus consequatur atque possimus ipsa. Ullam enim error minima ex officia dignissimos voluptates cum perferendis ipsum maiores ipsa consectetur, quod magni aperiam recusandae repellat in totam. Blanditiis, aspernatur dolore! Doloremque molestias ipsam dolores consequatur temporibus laboriosam perspiciatis voluptatum quos, laborum animi, ad at, perferendis sapiente? Temporibus soluta assumenda ipsa eveniet labore, officiis nam ullam aperiam ipsum quaerat esse obcaecati cum veniam suscipit ab corrupti, at, hic voluptate? Velit ad beatae, repellat id sint dicta! Quaerat ea porro debitis dolores ad odio ex ratione, sequi eveniet maxime quidem beatae incidunt. Alias odio delectus possimus velit eaque aliquam incidunt ullam praesentium laboriosam quod, quaerat consectetur cupiditate error perferendis quidem aspernatur voluptates at sapiente in sunt nihil. Soluta provident alias nisi, voluptatem deleniti mollitia vitae eum consectetur. Architecto vel pariatur delectus consequatur, sed eveniet consequuntur quisquam iusto vero aperiam obcaecati dignissimos, quo deserunt beatae quae! Rerum, amet.</p></div>
+        </div>
+        <h2 class="about__header two">skills</h2>
+        <div class="about__skills">
+          <div class="skill hidden"><img src="Svg/html-5-svgrepo-com.svg" height="100px" width="100px" class=" skills" alt=""></div>
+          <div class="skill hidden"><img src="Svg/css-3-svgrepo-com.svg"height="100px" class=" skills" width="100px" alt=""></div>
+          <div class="skill hidden"><img src="Svg/javascript-svgrepo-com (1).svg" height="100px" class=" skills" width="100px"alt=""></div>
+          <div class="skill hidden"> <img src="Svg/react-svgrepo-com (1).svg"height="100px" class=" skills" width="100px" alt=""></div>
+          <div class="skill hidden"><img src="Svg/git-svgrepo-com.svg" height="100px" class="skills" width="100px"alt=""></div>
+          <div class="skill hidden"><img src="Svg/figma-svgrepo-com.svg"height="100px" class=" skills" width="100px" alt=""></div>
         </div>
       </article>
+      <section id="project" class="projects hidden">
+        <div class="about__line one"> <hr/></div>
+        <h1 class="projects__header">PROJECTS</h1>
+        <div class="projects__container">
+          <div class="projects__image"><img src="/image/Screenshot (34).png" alt="" height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
+          <div class="projects__image"><img src="/image/Screenshot (35).png" alt="" height="300" width="500"> <p> <a href="#">A wordpress blog clone</a></p></div>
+          <div class="projects__image"><img src="/image/Screenshot (36).png" alt="" height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
+          <div class="projects__image"><img src="/image/Screenshot (37).png" alt=""height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
+        </div>
+      </section>
+      <section id="Contact" class="hidden">
+        <div class="about__line two"> <hr/></div>
+        <h1 class="contact__title">CONTACT</h1>
+        <h1 class="contact__text">let me help solve your design problems</h1>
+        <form
+          class="form"
+          action="https://formspree.io/f/mzbqbprw"
+          method="post"
+        >
+          <label for="name">Name:</label><br />
+          <input class="input" type="text" id="name" name="name" /><br />
+          <label for="email">Email:</label><br />
+          <input class="input" type="email" id="email" name="email" /><br />
+          <label for="message">Message:</label><br />
+          <textarea
+            class="input"
+            id="message"
+            name="message"
+            rows="7"
+            cols="30"
+          ></textarea
+          ><br /><br />
+          <input class="submit" type="submit" value="Send" />
+        </form>
+      </section>
+      <footer id="footer">
+        <div class="footer__info"><p>Nwoko Ifechukwudei Joshua</p></div>
+  
+        <div class="footer__links">
+          <a
+            href="https://instagram.com/chiachels_art?igshid=ZDdkNTZiNTM="
+            target="_blank"
+            class="btn contact-details"
+            ><i class="fa-brands fa-instagram"></i> Instagram</a
+          >
+          <a
+            id="profile-link"
+            href="https://chiachels.artstation.com/
+            "
+            target="_blank"
+            class="btn contact-details"
+            ><i class="fa-brands fa-artstation"></i> Artstation</a
+          >
+          <a
+            href="mailto:nwokoifechukwu@gmail.com"
+            class="btn contact-details"
+            ><i class="fas fa-at"></i> Send a mail</a
+          >
+          <a href="tel:08149429784" class="btn contact-details"
+            ><i class="fas fa-mobile-alt"></i> Call me</a
+          >
+        </div>
+      </footer>
     </div>
+    <button id="back-to-top-button" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+   
     <script src="js/index.js"></script>
     <div id="loading-page">
       <div class="loader">
         <h1>CHUDEI-D-DEV</h1>
       </div>
   </body>
-  <div id="loading-page">
-    <div class="loader">
-      <h1>CHUDEI-D-DEV</h1>
-    </div>
-  </div>
 </html>

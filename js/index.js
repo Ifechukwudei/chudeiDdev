@@ -23,6 +23,7 @@ window.addEventListener("load", function () {
     // Hide the loading page
     loadingPage.style.opacity = "0"
     loadingPage.style.pointerEvents = "none"
+    //loadingPage.style.display = "none"
 
     // Show the content and apply the transition effect
     header.classList.remove("hidden")
@@ -74,12 +75,92 @@ window.addEventListener("DOMContentLoaded", function () {
 })
 //transitions
 
-window.addEventListener("scroll", function () {
-  // Apply scrolling transition effect when content is in view
-  var content = document.getElementById("content")
-  var contentPosition = content.getBoundingClientRect().top
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    // prevent the default click behavior
+    event.preventDefault()
 
-  if (contentPosition - window.innerHeight <= 0) {
-    content.classList.add("visible")
-  }
+    // get the target element and its top position
+    const target = document.querySelector(link.getAttribute("href"))
+    const top = target.getBoundingClientRect().top
+
+    // scroll to the target element smoothly
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+      duration: 1000, // scroll duration in milliseconds
+      easing: "easeInOutQuad", // easing function
+    })
+  })
 })
+const backToTopButton = document.getElementById("back-to-top-button")
+const footer = document.getElementById("footer")
+
+window.addEventListener("scroll", scrollFunction)
+
+function scrollFunction() {
+  const footerTop = footer.getBoundingClientRect().top
+  if (window.pageYOffset > 300 && footerTop > window.innerHeight) {
+    // Show back to top button if window is scrolled down 300px and footer is not in view
+    if (!backToTopButton.classList.contains("btnEntrance")) {
+      backToTopButton.classList.remove("btnExit")
+      backToTopButton.classList.add("btnEntrance")
+      backToTopButton.style.display = "block"
+    }
+  } else {
+    // Hide back to top button if window is not scrolled down 300px or footer is in view
+    if (backToTopButton.classList.contains("btnEntrance")) {
+      backToTopButton.classList.remove("btnEntrance")
+      backToTopButton.classList.add("btnExit")
+      setTimeout(function () {
+        backToTopButton.style.display = "none"
+      }, 250)
+    }
+  }
+}
+
+backToTopButton.addEventListener("click", smoothScrollBackToTop)
+
+// function for smooth scroll back to top
+function smoothScrollBackToTop() {
+  const targetPosition = 0
+  const startPosition = window.pageYOffset
+  const distance = targetPosition - startPosition
+  const duration = 750
+  let start = null
+
+  window.requestAnimationFrame(step)
+
+  function step(timestamp) {
+    if (!start) start = timestamp
+    const progress = timestamp - start
+    window.scrollTo(
+      0,
+      easeInOutCubic(progress, startPosition, distance, duration)
+    )
+    if (progress < duration) window.requestAnimationFrame(step)
+  }
+}
+
+// function for scroll easing
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2
+  if (t < 1) return (c / 2) * t * t * t + b
+  t -= 2
+  return (c / 2) * (t * t * t + 2) + b
+}
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show")
+      } else {
+        entry.target.classList.remove("show")
+      }
+    })
+  },
+  { threshold: 0.5 }
+)
+
+const items = document.querySelectorAll(".hidden")
+items.forEach((item) => observer.observe(item))
