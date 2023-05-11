@@ -28,8 +28,8 @@ window.addEventListener("load", function () {
     // Show the content and apply the transition effect
     header.classList.remove("hidden")
     header.classList.add("visible")
-    content.classList.add("visible")
-    content.style.display = "block"
+    // content.classList.add("visible")
+    //content.style.display = "block"
   }, 15000) // 15 seconds delay
 })
 
@@ -82,10 +82,13 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     // get the target element and its top position
     const target = document.querySelector(link.getAttribute("href"))
-    const top = target.getBoundingClientRect().top
+    const fixedNavHeight = document.getElementById("headerId").offsetHeight
+    console.log(fixedNavHeight)
+    const top =
+      target.getBoundingClientRect().top + (window.pageYOffset - fixedNavHeight)
 
     // scroll to the target element smoothly
-    window.scrollTo({
+    target.scrollIntoView({
       top,
       behavior: "smooth",
       duration: 1000, // scroll duration in milliseconds
@@ -93,6 +96,14 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     })
   })
 })
+
+/*const target = document.querySelector(link.getAttribute("href"))
+
+target.scrollIntoView({
+  behavior: "smooth",
+  duration: 1000, // scroll duration in milliseconds
+  easing: "easeInOutQuad", // easing function
+})*/
 const backToTopButton = document.getElementById("back-to-top-button")
 const footer = document.getElementById("footer")
 
@@ -159,7 +170,7 @@ const observer = new IntersectionObserver(
       }
     })
   },
-  { threshold: 0.5 }
+  { threshold: 0.3 }
 )
 
 const items = document.querySelectorAll(".hidden")
