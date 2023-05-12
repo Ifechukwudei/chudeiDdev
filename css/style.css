@@ -552,8 +552,8 @@ form.form input[type="submit"].submit:hover {
     width: 250px;
   }
 
-  .about__text {
-    font-size: calc(var(--small-font) - 0.5rem);
+  .about__text p {
+    font-size: 1rem;
     font-family: "Alkatra", cursive;
     margin-top: 0;
     text-align: justify;
