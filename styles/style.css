@@ -35,7 +35,7 @@ body {
 }
 
 /* style for back to top button*/
-#back-to-top-button {
+.btn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -48,10 +48,9 @@ body {
   padding: 10px;
   border-radius: 50%;
   text-emphasis: 5px;
-  z-index: 999;
 }
 
-#back-to-top-button:hover {
+.btn:hover {
   background-color: var(--dark-blue);
 }
 /* end back top */
@@ -120,22 +119,25 @@ body {
 
 /* header styles*/
 
-.header.hidden {
-  display: none;
-}
-.header.visible {
+.header {
+  position: fixed;
+  left: 0;
+  top: -80px; /* set the initial top position to be hidden */
   display: flex;
   margin: 0;
   padding: 0 10px 0 10px;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: rgb(0, 0, 0);
   width: 100%;
   z-index: 9999;
-  background-color: rgb(0, 0, 0);
+  transition: top 0.5s ease-in-out; /* add a transition effect */
 }
+
+.header.show-header {
+  top: 0; /* set the top position to show the header */
+}
+
 .header__nav {
   display: flex;
   flex-direction: row;
@@ -403,9 +405,6 @@ form.form input[type="submit"].submit:hover {
     justify-content: center;
     list-style: none;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 9999;
     background-color: black;
@@ -616,17 +615,18 @@ form.form input[type="submit"].submit:hover {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    font-size: 0.8rem;
     background: var(--blue);
+    padding: 0 10px;
+    font-size: 1rem;
   }
   .footer__links {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
   }
   .footer__links a {
     text-decoration: none;
     color: var(--white);
-    font-size: 0.8rem;
   }
   .hidden {
     opacity: 0;

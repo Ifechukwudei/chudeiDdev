@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-      <header id="headerId" class="header">
+      <header id="headerId" class="header remove-header">
         <ul class="header__nav">
-          <li><a href="#headerId">Home</a></li>
+          <li><a id="back-to-top-button">Home</a></li>
           <li><a href="#aboutMe">About</a></li>
           <li><a href="#project">projects</a></li>
           <li><a href="#Contact">Contact</a></li>
@@ -45,7 +45,8 @@
           /></span>
         </div>
         <h1 class="hero__text two">A Front-end Developer</h1>
-        <p id="typing-text" class="hero__text three">|</p>
+        <p id="typing-text" class="hero__text three"><span id="typing-cursor">|</span>
+        </p>
         <div class="scroll"><div class="scroll-indicator"></div></div>
         
       </section>
@@ -54,7 +55,7 @@
 
         <h1 class="about__header">ABOUT <span class="about__header blue">me</span></h1>
         <div class="about__container ">
-          <div class="about__image"><img src="/image/PSX_20221128_055846.jpg" alt="about image" class="aboutme__image" height="400px" width="400px"></div>
+          <div class="about__image"><img src="image/PSX_20221128_055846.jpg" alt="about image" class="aboutme__image" height="400px" width="400px"></div>
         <div class="about__text"><p>I have extensive knowledge of HTML, CSS, JavaScript, and TypeScript as a Front-End Developer. To increase my understanding and proficiency in front-end programming, I have successfully attended a number of online courses and bootcamps. I have a strong interest for using these technologies to create cutting-edge, simple user interfaces. I like spending my leisure time working on own projects to develop my abilities and gain knowledge. I pick things up quickly and am always up for a challenge. I'd love to hear from you if you're searching for a driven and enthusiastic front-end developer.</p></div>
         </div>
         <h2 class="about__header two">skills</h2>
@@ -71,10 +72,10 @@
         <div class="about__line one"> <hr/></div>
         <h1 class="projects__header">PROJECTS</h1>
         <div class="projects__container">
-          <div class="projects__image"><img src="/image/Screenshot (34).png" alt="" height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
-          <div class="projects__image"><img src="/image/Screenshot (35).png" alt="" height="300" width="500"> <p> <a href="#">A wordpress blog clone</a></p></div>
-          <div class="projects__image"><img src="/image/Screenshot (36).png" alt="" height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
-          <div class="projects__image"><img src="/image/Screenshot (37).png" alt=""height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
+          <div class="projects__image"><img src="image/Screenshot (34).png" alt="" height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
+          <div class="projects__image"><img src="image/Screenshot (35).png" alt="" height="300" width="500"> <p> <a href="#">A wordpress blog clone</a></p></div>
+          <div class="projects__image"><img src="image/Screenshot (36).png" alt="" height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
+          <div class="projects__image"><img src="image/Screenshot (37).png" alt=""height="300" width="500"><p> <a href="#">A wordpress blog clone</a></p></div>
         </div>
       </section>
       <section id="Contact" class="hidden">
@@ -104,34 +105,40 @@
       </section>
       <footer id="footer">
         <div class="footer__info"><p>Nwoko Ifechukwudei Joshua</p></div>
-  
         <div class="footer__links">
           <a
-            href="https://instagram.com/chiachels_art?igshid=ZDdkNTZiNTM="
+            href="https://twitter.com/LawdOfdTerMinal"
             target="_blank"
-            class="btn contact-details"
-            ><i class="fa-brands fa-instagram"></i> Instagram</a
+            class=" contact-details"
+            ><i class="fa-brands fa-twitter"></i> Twitter</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ifechukwudei-nwoko/"
+            target="_blank"
+            class=" contact-details"
+            ><i class="fa-brands fa-linkedin"></i> LInkedin</a
           >
           <a
             id="profile-link"
             href="https://chiachels.artstation.com/
             "
             target="_blank"
-            class="btn contact-details"
-            ><i class="fa-brands fa-artstation"></i> Artstation</a
+            class=" contact-details"
+            ><i class="fa-brands fa-github"></i> Github</a
           >
           <a
             href="mailto:nwokoifechukwu@gmail.com"
-            class="btn contact-details"
+            class=" contact-details"
             ><i class="fas fa-at"></i> Send a mail</a
           >
-          <a href="tel:08149429784" class="btn contact-details"
+          <a href="tel:07059859089" class=" contact-details"
             ><i class="fas fa-mobile-alt"></i> Call me</a
           >
         </div>
       </footer>
+      <button id="back-to-top-button"class="btn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
-    <button id="back-to-top-button" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+   
    
     <script src="js/index.js"></script>
     <div id="loading-page">

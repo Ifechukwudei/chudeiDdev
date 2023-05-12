@@ -74,7 +74,6 @@ window.addEventListener("DOMContentLoaded", function () {
   type()
 })
 //transitions
-
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     // prevent the default click behavior
@@ -83,10 +82,9 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     // get the target element and its top position
     const target = document.querySelector(link.getAttribute("href"))
     const fixedNavHeight = document.getElementById("headerId").offsetHeight
-    console.log(fixedNavHeight)
-    const top =
-      target.getBoundingClientRect().top + (window.pageYOffset - fixedNavHeight)
 
+    const top =
+      target.getBoundingClientRect().top + window.pageYOffset - fixedNavHeight
     // scroll to the target element smoothly
     target.scrollIntoView({
       top,
@@ -95,6 +93,39 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       easing: "easeInOutQuad", // easing function
     })
   })
+})
+
+// detect when the user scrolls down and remove the show-header class if necessary
+
+// get the header element
+const header = document.getElementById("headerId")
+const threshold = 200 // change this to the desired threshold in pixels
+
+// initially hide the header
+//header.classList.add("remove-header")
+
+// detect when the mouse is hovering over the top of the page
+document.addEventListener("mousemove", (event) => {
+  if (event.clientY < 50) {
+    // change 50 to the desired value for your page
+    header.classList.remove("remove-header")
+    header.classList.add("show-header")
+  } else {
+    header.classList.remove("show-header")
+    header.classList.add("remove-header")
+  }
+})
+
+// detect when the header is clicked and remove the show-header class
+header.addEventListener("click", () => {
+  header.classList.remove("show-header")
+  header.classList.add("remove-header")
+})
+// detect when the user scrolls down and remove the show-header class if necessary
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > threshold) {
+    header.classList.remove("remove-header")
+  }
 })
 
 /*const target = document.querySelector(link.getAttribute("href"))
