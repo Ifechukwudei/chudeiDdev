@@ -1,13 +1,13 @@
 {
-  "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "path-browserify": "^1.0.1"
-  },
   "devDependencies": {
     "dotenv": "^16.0.3",
-    "vite": "^4.3.5"
+    "parcel": "^2.8.3"
   },
+  "source": "./index.html",
   "scripts": {
-    "dev": "vite"
+    
+    "start": "parcel",
+    "build": "parcel build"
   }
+
 }
