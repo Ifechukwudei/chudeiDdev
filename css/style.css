@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 :root {
   --white: beige;
   --blue: rgb(35, 119, 152);
@@ -18,7 +18,7 @@
 body {
   font-size: 16px;
   color: var(--white);
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   background: black;
   margin: 0;
 }
@@ -48,6 +48,7 @@ body {
   padding: 10px;
   border-radius: 50%;
   text-emphasis: 5px;
+  z-index: 9999;
 }
 
 .btn:hover {
@@ -76,7 +77,7 @@ body {
 }
 
 .scroll-indicator:before {
-  content: "";
+  content: '';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +131,7 @@ body {
   align-items: center;
   background-color: rgb(0, 0, 0);
   width: 100%;
-  z-index: 9999;
+  z-index: 999;
   transition: top 0.5s ease-in-out; /* add a transition effect */
 }
 
@@ -207,7 +208,7 @@ body {
 }
 .hero__text.one {
   font-size: var(--medium-font);
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -244,7 +245,7 @@ body {
 }
 .about__header.blue {
   color: var(--blue);
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
 }
 hr {
   width: 50%;
@@ -270,13 +271,13 @@ hr {
 .about__text p {
   line-height: 40px;
   font-size: var(--small-font);
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
   margin-top: 0;
   text-align: justify;
 }
 .about__header.two {
   color: var(--blue);
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
 }
 .about__skills {
   display: flex;
@@ -348,7 +349,7 @@ hr {
 .contact__text {
   text-align: center;
   font-size: var(--medium-font);
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
 }
 .contact__title {
   text-align: center;
@@ -374,7 +375,7 @@ form.form textarea.input {
 }
 
 /* Style the submit button */
-form.form input[type="submit"].submit {
+form.form input[type='submit'].submit {
   width: 100%;
   background-color: var(--blue);
   color: white;
@@ -386,7 +387,7 @@ form.form input[type="submit"].submit {
 }
 
 /* Add a hover effect to the submit button */
-form.form input[type="submit"].submit:hover {
+form.form input[type='submit'].submit:hover {
   background-color: var(--dark-blue);
 }
 /*contact stylin*/
@@ -426,7 +427,7 @@ form.form input[type="submit"].submit:hover {
   }
   .hero__text.one {
     font-size: 1rem;
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
   }
   .wave {
     display: none;
@@ -525,7 +526,7 @@ form.form input[type="submit"].submit:hover {
   }
   .about__header.blue {
     color: var(--blue);
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
   }
   hr {
     width: 50%;
@@ -554,13 +555,13 @@ form.form input[type="submit"].submit:hover {
 
   .about__text p {
     font-size: 1rem;
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
     margin-top: 0;
     text-align: justify;
   }
   .about__header.two {
     color: var(--blue);
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
   }
   .about__skills {
     display: flex;
@@ -610,6 +611,13 @@ form.form input[type="submit"].submit:hover {
     height: 150px;
     width: 250px;
   }
+  form.form {
+    min-width: 300px;
+    margin: 0 auto;
+    border: 1px solid var(--blue);
+    padding: 20px;
+    box-sizing: border-box;
+  }
   #footer {
     display: flex;
     flex-direction: column;
@@ -650,7 +658,7 @@ form.form input[type="submit"].submit:hover {
     width: 100%;
     height: 100%;
     background-color: black;
-    z-index: 999;
+    z-index: 99;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -756,7 +764,7 @@ form.form input[type="submit"].submit:hover {
   }
   .about__header.blue {
     color: var(--blue);
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
   }
   hr {
     width: 50%;
@@ -782,13 +790,13 @@ form.form input[type="submit"].submit:hover {
   .about__text p {
     line-height: 40px;
     font-size: var(--small-font);
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
     margin-top: 0;
     text-align: justify;
   }
   .about__header.two {
     color: var(--blue);
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
   }
   .about__skills {
     display: flex;

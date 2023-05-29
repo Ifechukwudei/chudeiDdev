@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
 window.addEventListener('load', function () {
   // Show the loading page initially
   var loadingPage = document.getElementById('loading-page');
-  var content = document.getElementById('content');
+  //var content = document.getElementById('content');
   var header = document.getElementById('headerId');
 
   setTimeout(function () {
@@ -38,9 +38,9 @@ window.addEventListener('load', function () {
 window.addEventListener('DOMContentLoaded', function () {
   var textElement = document.getElementById('typing-text');
   var texts = [
-    'Welcome to my portfolio!',
-    'I am a web developer.',
-    'I love coding and design.',
+    '| Welcome to my portfolio!',
+    '| I am a web developer.',
+    '| I love coding and design.',
   ]; // Array of texts to display
   var speed = 100; // Typing speed (in milliseconds)
   var delay = 2000; // Delay between texts (in milliseconds)
@@ -58,8 +58,8 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   function erase() {
-    if (index > 0) {
-      textElement.textContent = texts[textIndex].substring(0, index - 1);
+    if (index > 1) {
+      textElement.textContent = texts[textIndex].substring(0, index);
       index--;
       setTimeout(erase, speed);
     } else {
@@ -73,6 +73,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   type();
 });
+
 //transitions
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
@@ -95,11 +96,18 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-// detect when the user scrolls down and remove the show-header class if necessary
-
 // get the header element
 const header = document.getElementById('headerId');
 const threshold = 200; // change this to the desired threshold in pixels
+// initially show the the header
+header.classList.add('show-header');
+
+// detect when the user scrolls down and remove the show-header class if necessary
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > threshold) {
+    header.classList.remove('remove-header');
+  }
+});
 
 // initially hide the header
 //header.classList.add("remove-header")
@@ -120,12 +128,6 @@ document.addEventListener('mousemove', (event) => {
 header.addEventListener('click', () => {
   header.classList.remove('show-header');
   header.classList.add('remove-header');
-});
-// detect when the user scrolls down and remove the show-header class if necessary
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > threshold) {
-    header.classList.remove('remove-header');
-  }
 });
 
 /*const target = document.querySelector(link.getAttribute("href"))

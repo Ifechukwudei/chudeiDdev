@@ -18,14 +18,14 @@
   <body>
       <header id="headerId" class="header remove-header">
         <ul class="header__nav">
-          <li><a id="back-to-top-button">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#aboutMe">About</a></li>
           <li><a href="#project">projects</a></li>
           <li><a href="#Contact">Contact</a></li>
         </ul>
         <p class="header__button"><a href="#Contact">Get in touch</a></p>
       </header>
-      <section class="hero hidden">
+      <section id="hero" class="hero hidden">
         <div class="hero__image">
           <img
             src="image/my pic.png"
@@ -46,7 +46,7 @@
           /></span>
         </div>
         <h1 class="hero__text two">A Front-end Developer</h1>
-        <p id="typing-text" class="hero__text three"><span id="typing-cursor">|</span>
+        <p id="typing-text" class="hero__text three"><span id="typing-cursor"></span>
         </p>
         <div class="scroll"><div class="scroll-indicator"></div></div>
         
@@ -138,8 +138,8 @@
           >
         </div>
       </footer>
-      <button id="back-to-top-button" class="btn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
+    <button id="back-to-top-button" class="btn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script type="module" src="js/main.js"></script>
     <div id="loading-page">
       <div class="loader">
