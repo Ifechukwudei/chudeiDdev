@@ -33,6 +33,13 @@ body {
   filter: blur(0);
   transform: translateX(0);
 }
+.success {
+  background-color: rgba(212, 31, 14, 0.751);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
 
 /* style for back to top button*/
 .btn {

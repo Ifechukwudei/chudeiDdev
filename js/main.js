@@ -198,9 +198,9 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {
+      } /* else {
         entry.target.classList.remove('show');
-      }
+      } */
     });
   },
   { threshold: 0.3 }
@@ -233,9 +233,17 @@ document
       .then(
         function (response) {
           console.log('SUCCESS', response);
+          // document.querySelector('.success').style.display = 'block';
+          // document.querySelector('.success').style.transform = 'translateY(0)';
+          // name.value = '';
+          // email.value = '';
+          // message.value = '';
         },
         function (error) {
           console.log('FAILED', error);
+          document.querySelector('.success').style.display = 'block';
+          document.querySelector('.success').style.transform = 'translateY(0)';
+          document.querySelector('.error').textContent = error.text;
         }
       );
   });
